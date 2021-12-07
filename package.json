@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build --prod"
-
+    "heroku-postbuild": "ng build --prod",
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript"
   },
   "private": true,
   "dependencies": {
